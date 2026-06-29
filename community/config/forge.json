@@ -1,0 +1,35 @@
+{
+  "template": "community",
+  "versie": "1.0",
+  "beschrijving": "Volledige community backend met posts, groepen, evenementen en gamification",
+  "vereiste_variabelen": [
+    "COMMUNITY_NAAM", "COMMUNITY_EMAIL", "COMMUNITY_URL",
+    "DATABASE_URL", "JWT_SECRET", "FRONTEND_URL"
+  ],
+  "optionele_variabelen": [
+    "REDIS_URL", "S3_BUCKET", "GAMIFICATION_ACTIEF",
+    "EVENEMENTEN_ACTIEF", "AGENT_ACTIEF"
+  ],
+  "modules": {
+    "groepen": true,
+    "posts": true,
+    "reacties": true,
+    "berichten": true,
+    "evenementen": true,
+    "badges": true,
+    "gamification": true,
+    "moderatie": true,
+    "zoeken": true,
+    "agent": false
+  },
+  "compatibele_frontends": [
+    "community-v1", "community-v2", "community-v3", "community-v4",
+    "saas-v1", "saas-v2", "saas-v3", "saas-v4"
+  ],
+  "compatibele_admin": "admin-community",
+  "compatibele_agent": "agent-community",
+  "database": "postgresql",
+  "cache": "redis",
+  "poort": 8000,
+  "deployment": "docker"
+}
