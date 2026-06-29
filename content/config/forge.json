@@ -1,0 +1,32 @@
+{
+  "template": "content",
+  "versie": "1.0",
+  "beschrijving": "Volledige content/blog backend met artikelen, paginas, media en nieuwsbrief",
+  "vereiste_variabelen": [
+    "SITE_NAAM", "SITE_EMAIL", "SITE_URL",
+    "DATABASE_URL", "JWT_SECRET", "FRONTEND_URL"
+  ],
+  "optionele_variabelen": [
+    "GA_ID", "S3_BUCKET", "AGENT_ACTIEF"
+  ],
+  "modules": {
+    "artikelen": true,
+    "paginas": true,
+    "media": true,
+    "commentaren": true,
+    "nieuwsbrief": true,
+    "seo": true,
+    "menu": true,
+    "agent": false
+  },
+  "compatibele_frontends": [
+    "blog-v1", "blog-v2", "blog-v3", "blog-v4",
+    "portfolio-v1", "portfolio-v2", "portfolio-v3", "portfolio-v4",
+    "landing-v1", "landing-v2", "landing-v3", "landing-v4"
+  ],
+  "compatibele_admin": "admin-content",
+  "compatibele_agent": "agent-content",
+  "database": "postgresql",
+  "poort": 8000,
+  "deployment": "docker"
+}
