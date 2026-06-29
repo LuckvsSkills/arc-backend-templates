@@ -1,0 +1,36 @@
+{
+  "template": "saas",
+  "versie": "1.0",
+  "beschrijving": "Volledige SaaS backend met organisaties, abonnementen, API sleutels en facturatie",
+  "vereiste_variabelen": [
+    "PLATFORM_NAAM", "PLATFORM_PREFIX", "PLATFORM_EMAIL",
+    "PLATFORM_URL", "DATABASE_URL", "REDIS_URL",
+    "JWT_SECRET", "BETAAL_PROVIDER", "FRONTEND_URL",
+    "PRIJS_STARTER", "PRIJS_PRO"
+  ],
+  "optionele_variabelen": [
+    "MOLLIE_API_KEY", "STRIPE_SECRET_KEY",
+    "PROEFPERIODE_DAGEN", "AGENT_ACTIEF"
+  ],
+  "modules": {
+    "organisaties": true,
+    "abonnementen": true,
+    "facturatie": true,
+    "api_sleutels": true,
+    "webhooks": true,
+    "gebruik_analytics": true,
+    "notificaties": true,
+    "twee_factor_auth": true,
+    "agent": false
+  },
+  "compatibele_frontends": [
+    "saas-v1", "saas-v2", "saas-v3", "saas-v4",
+    "landing-v1", "landing-v2", "landing-v3", "landing-v4"
+  ],
+  "compatibele_admin": "admin-saas",
+  "compatibele_agent": "agent-saas",
+  "database": "postgresql",
+  "cache": "redis",
+  "poort": 8000,
+  "deployment": "docker"
+}
