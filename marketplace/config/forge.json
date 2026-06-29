@@ -1,0 +1,36 @@
+{
+  "template": "marketplace",
+  "versie": "1.0",
+  "beschrijving": "Volledige marketplace backend met verkopers, advertenties, transacties en commissies",
+  "vereiste_variabelen": [
+    "PLATFORM_NAAM", "PLATFORM_PREFIX", "PLATFORM_EMAIL",
+    "PLATFORM_URL", "DATABASE_URL", "JWT_SECRET",
+    "BETAAL_PROVIDER", "FRONTEND_URL"
+  ],
+  "optionele_variabelen": [
+    "STANDAARD_COMMISSIE", "MOLLIE_API_KEY",
+    "STRIPE_SECRET_KEY", "AGENT_ACTIEF"
+  ],
+  "modules": {
+    "verkopers": true,
+    "advertenties": true,
+    "transacties": true,
+    "betalingen": true,
+    "uitbetalingen": true,
+    "berichten": true,
+    "beoordelingen": true,
+    "moderatie": true,
+    "zoeken": true,
+    "agent": false
+  },
+  "compatibele_frontends": [
+    "marketplace-v1", "marketplace-v2", "marketplace-v3", "marketplace-v4",
+    "directory-v1", "directory-v2", "directory-v3", "directory-v4"
+  ],
+  "compatibele_admin": "admin-marketplace",
+  "compatibele_agent": "agent-marketplace",
+  "database": "postgresql",
+  "cache": "redis",
+  "poort": 8000,
+  "deployment": "docker"
+}
