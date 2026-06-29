@@ -1,0 +1,33 @@
+{
+  "template": "booking",
+  "versie": "1.0",
+  "beschrijving": "Volledige booking backend met agenda, diensten, reserveringen en betalingen",
+  "vereiste_variabelen": [
+    "BEDRIJF_NAAM", "BEDRIJF_PREFIX", "BEDRIJF_EMAIL",
+    "BEDRIJF_URL", "DATABASE_URL", "JWT_SECRET",
+    "BETAAL_PROVIDER", "FRONTEND_URL"
+  ],
+  "optionele_variabelen": [
+    "MOLLIE_API_KEY", "STRIPE_SECRET_KEY",
+    "SMS_ACTIEF", "SMS_API_KEY", "AGENT_ACTIEF"
+  ],
+  "modules": {
+    "diensten": true,
+    "medewerkers": true,
+    "beschikbaarheid": true,
+    "reserveringen": true,
+    "betalingen": true,
+    "herinneringen": true,
+    "reviews": true,
+    "wachtlijst": true,
+    "agent": false
+  },
+  "compatibele_frontends": [
+    "booking-v1", "booking-v2", "booking-v3", "booking-v4"
+  ],
+  "compatibele_admin": "admin-booking",
+  "compatibele_agent": "agent-booking",
+  "database": "postgresql",
+  "poort": 8000,
+  "deployment": "docker"
+}

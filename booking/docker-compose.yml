@@ -1,0 +1,44 @@
+version: '3.9'
+
+services:
+  api:
+    build: .
+    container_name: {{BEDRIJF_PREFIX}}_api
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    depends_on:
+      - database
+      - redis
+    networks:
+      - booking_netwerk
+
+  database:
+    image: postgres:15-alpine
+    container_name: {{BEDRIJF_PREFIX}}_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: booking_db
+      POSTGRES_USER: ${DB_GEBRUIKER}
+      POSTGRES_PASSWORD: ${DB_WACHTWOORD}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./database/schema.sql:/docker-entrypoint-initdb.d/schema.sql
+    networks:
+      - booking_netwerk
+
+  redis:
+    image: redis:7-alpine
+    container_name: {{BEDRIJF_PREFIX}}_cache
+    restart: unless-stopped
+    networks:
+      - booking_netwerk
+
+volumes:
+  postgres_data:
+
+networks:
+  booking_netwerk:
+    driver: bridge
