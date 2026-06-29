@@ -1,0 +1,43 @@
+{
+  "template": "ecommerce",
+  "versie": "1.0",
+  "beschrijving": "Volledige e-commerce backend met producten, bestellingen en betalingen",
+  "vereiste_variabelen": [
+    "WINKEL_NAAM",
+    "WINKEL_PREFIX",
+    "WINKEL_EMAIL",
+    "WINKEL_URL",
+    "DATABASE_URL",
+    "JWT_SECRET",
+    "BETAAL_PROVIDER",
+    "FRONTEND_URL"
+  ],
+  "optionele_variabelen": [
+    "MOLLIE_API_KEY",
+    "STRIPE_SECRET_KEY",
+    "S3_BUCKET",
+    "AGENT_ACTIEF",
+    "AGENT_API_URL"
+  ],
+  "modules": {
+    "producten": true,
+    "bestellingen": true,
+    "betalingen": true,
+    "reviews": true,
+    "kortingscodes": true,
+    "nieuwsbrief": true,
+    "media": true,
+    "agent": false
+  },
+  "compatibele_frontends": [
+    "ecommerce-v1",
+    "ecommerce-v2",
+    "ecommerce-v3",
+    "ecommerce-v4"
+  ],
+  "compatibele_admin": "admin-ecommerce",
+  "compatibele_agent": "agent-ecommerce",
+  "database": "postgresql",
+  "poort": 8000,
+  "deployment": "docker"
+}
