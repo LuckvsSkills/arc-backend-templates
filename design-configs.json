@@ -1,0 +1,109 @@
+{
+  "versie": "1.0",
+  "beschrijving": "Design configuratie opties per template type. Forge past CSS variabelen aan op basis van klant keuze.",
+  "kleurpaletten": {
+    "ocean": {
+      "naam": "Ocean",
+      "beschrijving": "Koel, professioneel, betrouwbaar",
+      "--accent": "#0070f3",
+      "--accent-2": "#06b6d4",
+      "--bg": "#f0f8ff",
+      "--tekst": "#0a1628"
+    },
+    "forest": {
+      "naam": "Forest",
+      "beschrijving": "Natuurlijk, duurzaam, rustig",
+      "--accent": "#2d7a3f",
+      "--accent-2": "#4ab97c",
+      "--bg": "#f0f8f2",
+      "--tekst": "#0a1e0f"
+    },
+    "sunset": {
+      "naam": "Sunset",
+      "beschrijving": "Warm, energiek, uitnodigend",
+      "--accent": "#e85d26",
+      "--accent-2": "#f5a623",
+      "--bg": "#fff8f0",
+      "--tekst": "#2d1a08"
+    },
+    "midnight": {
+      "naam": "Midnight",
+      "beschrijving": "Premium, exclusief, modern",
+      "--accent": "#7c3aed",
+      "--accent-2": "#06b6d4",
+      "--bg": "#0f0f1a",
+      "--tekst": "#e2e8f0"
+    },
+    "rose": {
+      "naam": "Rose",
+      "beschrijving": "Vriendelijk, zacht, persoonlijk",
+      "--accent": "#e11d48",
+      "--accent-2": "#f43f5e",
+      "--bg": "#fff0f3",
+      "--tekst": "#2d0a14"
+    },
+    "slate": {
+      "naam": "Slate",
+      "beschrijving": "Strak, zakelijk, betrouwbaar",
+      "--accent": "#334155",
+      "--accent-2": "#64748b",
+      "--bg": "#f8fafc",
+      "--tekst": "#0f172a"
+    }
+  },
+  "lettertypen": {
+    "modern": {
+      "naam": "Modern",
+      "beschrijving": "Clean en helder",
+      "family": "-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+      "google_font": null
+    },
+    "klassiek": {
+      "naam": "Klassiek",
+      "beschrijving": "Tijdloos en elegant",
+      "family": "Georgia, 'Times New Roman', serif",
+      "google_font": "Playfair+Display"
+    },
+    "vriendelijk": {
+      "naam": "Vriendelijk",
+      "beschrijving": "Warm en toegankelijk",
+      "family": "'Nunito', 'Quicksand', sans-serif",
+      "google_font": "Nunito"
+    },
+    "tech": {
+      "naam": "Tech",
+      "beschrijving": "Precies en modern",
+      "family": "'Inter', 'DM Sans', sans-serif",
+      "google_font": "Inter"
+    }
+  },
+  "button_stijlen": {
+    "rond":     {"border-radius": "999px", "naam": "Rond"},
+    "medium":   {"border-radius": "8px",   "naam": "Afgerond"},
+    "vierkant": {"border-radius": "2px",   "naam": "Vierkant"}
+  },
+  "sfeer_naar_kleurpalet": {
+    "Modern tech":           "midnight",
+    "Warm & vriendelijk":    "sunset",
+    "Luxe & premium":        "midnight",
+    "Minimaal":              "slate",
+    "Speels & kleurrijk":    "rose",
+    "Strak & professioneel": "ocean"
+  },
+  "sfeer_naar_lettertype": {
+    "Modern tech":           "tech",
+    "Warm & vriendelijk":    "vriendelijk",
+    "Luxe & premium":        "klassiek",
+    "Minimaal":              "modern",
+    "Speels & kleurrijk":    "vriendelijk",
+    "Strak & professioneel": "modern"
+  },
+  "sfeer_naar_button": {
+    "Modern tech":           "medium",
+    "Warm & vriendelijk":    "rond",
+    "Luxe & premium":        "vierkant",
+    "Minimaal":              "vierkant",
+    "Speels & kleurrijk":    "rond",
+    "Strak & professioneel": "medium"
+  }
+}

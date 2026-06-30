@@ -1,0 +1,81 @@
+{
+  "versie": "1.0",
+  "beschrijving": "Welke frontend templates werken met welke backends. Forge gebruikt dit om foute combinaties te blokkeren.",
+  "combinaties": {
+    "landing": {
+      "backends": ["saas", "content"],
+      "combinaties": [],
+      "aanbevolen": "saas"
+    },
+    "portfolio": {
+      "backends": ["content"],
+      "combinaties": [],
+      "aanbevolen": "content"
+    },
+    "blog": {
+      "backends": ["content"],
+      "combinaties": ["content+community"],
+      "aanbevolen": "content"
+    },
+    "bedrijf": {
+      "backends": ["content", "saas", "booking"],
+      "combinaties": ["content+booking"],
+      "aanbevolen": "content"
+    },
+    "ecommerce": {
+      "backends": ["ecommerce"],
+      "combinaties": ["ecommerce+booking", "ecommerce+content"],
+      "aanbevolen": "ecommerce"
+    },
+    "booking": {
+      "backends": ["booking"],
+      "combinaties": ["booking+ecommerce", "booking+community"],
+      "aanbevolen": "booking"
+    },
+    "marketplace": {
+      "backends": ["marketplace"],
+      "combinaties": ["marketplace+booking"],
+      "aanbevolen": "marketplace"
+    },
+    "saas": {
+      "backends": ["saas"],
+      "combinaties": ["saas+community"],
+      "aanbevolen": "saas"
+    },
+    "community": {
+      "backends": ["community"],
+      "combinaties": ["community+content", "community+saas"],
+      "aanbevolen": "community"
+    },
+    "dashboard": {
+      "backends": ["saas", "ecommerce"],
+      "combinaties": [],
+      "aanbevolen": "saas"
+    },
+    "directory": {
+      "backends": ["marketplace"],
+      "combinaties": ["marketplace+content"],
+      "aanbevolen": "marketplace"
+    },
+    "api": {
+      "backends": ["saas"],
+      "combinaties": [],
+      "aanbevolen": "saas"
+    },
+    "hybride-retail": {
+      "backends": ["ecommerce"],
+      "combinaties": ["ecommerce+booking"],
+      "aanbevolen": "ecommerce+booking"
+    }
+  },
+  "effect_compatibiliteit": {
+    "E1-aurora":        ["saas", "landing", "bedrijf", "portfolio"],
+    "E2-kinetic":       ["bedrijf", "saas", "landing", "portfolio", "ecommerce"],
+    "E3-depth":         ["ecommerce", "portfolio", "landing", "bedrijf"],
+    "E4-particle":      ["saas", "api", "landing", "tech"],
+    "E5-brutalist":     ["portfolio", "community", "landing"],
+    "E6-glassmorphism": ["saas", "dashboard", "community"],
+    "E7-magnetic":      ["portfolio", "community", "landing"],
+    "E8-storytelling":  ["landing", "bedrijf", "blog", "portfolio", "saas"]
+  }
+}
